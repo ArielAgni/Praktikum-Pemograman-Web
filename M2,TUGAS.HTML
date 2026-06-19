@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praktikum CSS</title>
+
+<style>
+/* Box sizing global */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background halaman */
+body {
+    background-color: #add8e6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Judul */
+h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Paragraf */
+p {
+    background-color: #d3d3d3;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Container grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Kotak */
+.box1, .box2, .box3 {
+    border: 2px solid black;
+    padding: 10px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Warna masing-masing box */
+.box1 {
+    background-color: #ff9999;
+}
+
+.box2 {
+    background-color: #99ff99;
+}
+
+.box3 {
+    background-color: #9999ff;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Smartphone */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .box1, .box2, .box3 {
+        height: 120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Praktikum CSS</h1>
+
+<p>
+Ini adalah contoh paragraf dengan latar belakang abu-abu muda, dibuat agar mudah dibaca dan sesuai dengan ketentuan praktikum CSS.
+</p>
+
+<div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+</div>
+
+</body>
+</html>
